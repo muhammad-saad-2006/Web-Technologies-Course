@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f2f2f5;
 }
 
 .header {
@@ -14,6 +15,13 @@ body {
   padding: 25px 40px;
   background-color: #34363d;
   color: white;
+}
+
+.cv {
+  width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 12);
 }
 
 .profile-image img {
@@ -72,7 +80,7 @@ body {
 
 .main-content {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 28% 72%;
 }
 
 .left-column {
@@ -224,9 +232,7 @@ body {
 }
 
 .project {
-  margin: 0 0 5px;
-  font-size: 18px;
-  color: #34363d;
+  margin-bottom: 30px;
 }
 
 .project:last-child {
