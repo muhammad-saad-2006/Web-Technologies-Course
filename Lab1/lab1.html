@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SneakPeak – Online Store</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">SneakPeak</a>
+
+      <form action="/search" method="get" role="search">
+        <label for="site-search">Search products</label>
+        <input type="search" id="site-search" name="q" />
+        <button type="submit">Search</button>
+      </form>
+
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/deals">Deals</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/cart">Cart</a></li>
+          <li><a href="/account">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="featured-heading">
+        <h1>Welcome to SneakPeak</h1>
+        <h2 id="featured-heading">Featured Products</h2>
+        <ul>
+          <li>
+            <article>
+              <img
+                src="https://images.unsplash.com/photo-1675625500632-2d276bd51920?auto=format&amp;fit=crop&amp;w=300&amp;h=300&amp;q=60"
+                alt="Red Sneakers"
+                width="300"
+                height="300"
+              />
+              <h3><a href="/products/product-1">Red Sneakers</a></h3>
+              <p>Bold red sneakers with a clean, minimal look.</p>
+              <p><data value="89.99">$89.99</data></p>
+              <button type="button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img
+                src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?auto=format&amp;fit=crop&amp;w=300&amp;h=300&amp;q=60"
+                alt="Grey Low-Top Sneakers"
+                width="300"
+                height="300"
+              />
+              <h3><a href="/products/product-2">Grey Low-Top Sneakers</a></h3>
+              <p>Lightweight low-top sneakers for everyday wear.</p>
+              <p><data value="74.99">$74.99</data></p>
+              <button type="button">Add to cart</button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img
+                src="https://images.unsplash.com/photo-1676379827610-c380c52db0c6?auto=format&amp;fit=crop&amp;w=300&amp;h=300&amp;q=60"
+                alt="White Sneakers"
+                width="300"
+                height="300"
+              />
+              <h3><a href="/products/product-3">White Sneakers</a></h3>
+              <p>Classic white sneakers that go with everything.</p>
+              <p><data value="64.99">$64.99</data></p>
+              <button type="button">Add to cart</button>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="categories-heading">
+        <h2 id="categories-heading">Shop by Category</h2>
+        <ul>
+          <li><a href="/category/electronics">Electronics</a></li>
+          <li><a href="/category/clothing">Clothing</a></li>
+          <li><a href="/category/home">Home &amp; Garden</a></li>
+          <li><a href="/category/sports">Sports &amp; Outdoors</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="newsletter-heading">
+        <h2 id="newsletter-heading">Subscribe to Our Newsletter</h2>
+        <p>Get news about new arrivals and exclusive offers.</p>
+        <form action="/newsletter" method="post">
+          <label for="newsletter-email">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <section aria-labelledby="footer-shop-heading">
+          <h2 id="footer-shop-heading">Shop</h2>
+          <ul>
+            <li><a href="/shop">All Products</a></li>
+            <li><a href="/deals">Deals</a></li>
+            <li><a href="/gift-cards">Gift Cards</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-support-heading">
+          <h2 id="footer-support-heading">Customer Support</h2>
+          <ul>
+            <li><a href="/help">Help Center</a></li>
+            <li><a href="/shipping">Shipping &amp; Delivery</a></li>
+            <li><a href="/returns">Returns</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-company-heading">
+          <h2 id="footer-company-heading">Company</h2>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </section>
+      </nav>
+
+      <p><small>&copy; 2026 SneakPeak. All rights reserved.</small></p>
+    </footer>
+  </body>
+</html>
