@@ -1,0 +1,42 @@
+/* Announcement Bar */
+.announcement-bar {
+  height: 30px;
+  background-color: #222222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  position: relative;
+}
+
+.announcement-bar p {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  pointer-events: none;
+  opacity: 1;
+  transition: 180ms ease-in-out;
+}
+
+.announcement-bar p.is-changing {
+  opacity: 0;
+}
+
+.announcement-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
