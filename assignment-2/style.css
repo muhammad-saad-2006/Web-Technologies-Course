@@ -12,3 +12,27 @@ body {
 #announcement-message.is-changing {
   opacity: 0;
 }
+
+.hero {
+  height: calc(100vh - 120px);
+  min-height: 420px;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    height: calc(100vh - 165px);
+  }
+}
+
+/* Button in hero section */
+.btn-hero {
+  --bs-btn-color: #222;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-border-color: #000;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #000;
+  --bs-btn-active-border-color: #000;
+}
