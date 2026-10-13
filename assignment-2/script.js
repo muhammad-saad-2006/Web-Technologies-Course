@@ -4,6 +4,8 @@ const announcements = [
 ];
 
 let currentAnnouncement = 0;
+let rotationTimer;
+let animationInProgress = false;
 
 const announcementMessage = document.getElementById("announcement-message");
 
@@ -12,17 +14,26 @@ const previousButton = document.getElementById("previous-announcement");
 const nextButton = document.getElementById("next-announcement");
 
 function showAnnouncement(index) {
-  if (announcementMessage.classList.contains("is-changing")) {
-    return;
-  }
+  if (animationInProgress) return;
+
+  animationInProgress = true;
   currentAnnouncement = (index + announcements.length) % announcements.length;
 
   announcementMessage.classList.add("is-changing");
 
-  setTimeout(function () {
+  setTimeout(() => {
     announcementMessage.textContent = announcements[currentAnnouncement];
     announcementMessage.classList.remove("is-changing");
+    animationInProgress = false;
   }, 180);
+}
+
+function startRotation() {
+  clearInterval(rotationTimer);
+
+  rotationTimer = setInterval(() => {
+    showAnnouncement(currentAnnouncement + 1);
+  }, 5000);
 }
 
 previousButton.addEventListener("click", function () {
@@ -32,3 +43,5 @@ previousButton.addEventListener("click", function () {
 nextButton.addEventListener("click", function () {
   showAnnouncement(currentAnnouncement + 1);
 });
+
+startRotation();
