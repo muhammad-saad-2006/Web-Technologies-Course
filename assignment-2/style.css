@@ -36,3 +36,31 @@ body {
   --bs-btn-active-bg: #000;
   --bs-btn-active-border-color: #000;
 }
+
+.category-card {
+  --bs-card-border-radius: 2rem;
+  transition: border-radius 0.4s ease;
+}
+
+.category-card:is(:hover, :focus-within) {
+  --bs-card-border-radius: 20rem;
+}
+
+.card-rest,
+.card-hover {
+  transition: opacity 0.7s ease;
+}
+
+.card-hover {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.category-card:is(:hover, :focus-within) .card-hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.category-card:is(:hover, :focus-within) .card-rest {
+  opacity: 0;
+}
