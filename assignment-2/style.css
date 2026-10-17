@@ -39,7 +39,7 @@ body {
 
 .category-card {
   --bs-card-border-radius: 2rem;
-  transition: border-radius 0.4s ease;
+  transition: border-radius 1.5s ease;
 }
 
 .category-card:is(:hover, :focus-within) {
@@ -48,7 +48,7 @@ body {
 
 .card-rest,
 .card-hover {
-  transition: opacity 0.7s ease;
+  transition: opacity 0.4s ease;
 }
 
 .card-hover {
