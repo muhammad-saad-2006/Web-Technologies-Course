@@ -64,3 +64,34 @@ body {
 .category-card:is(:hover, :focus-within) .card-rest {
   opacity: 0;
 }
+
+.category-scroll {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* hide the scrollbar (Firefox) */
+}
+.category-scroll::-webkit-scrollbar {
+  display: none; /* hide the scrollbar (Chrome, Safari, Edge) */
+}
+.category-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Featured Cards */
+.feature-title {
+  font-family: "Newsreader", serif;
+}
+
+.feature-img {
+  aspect-ratio: 7/10;
+  transition: transform 0.7s ease;
+  will-change: transform;
+}
+
+.card:hover .feature-img {
+  transform: scale(1.1);
+}
+
+.btn-feature {
+  --bs-btn-font-size: 0.75rem;
+  --bs-btn-padding-y: 0.4rem;
+}
