@@ -40,9 +40,10 @@ body {
 .category-card {
   --bs-card-border-radius: 2rem;
   transition: border-radius 1.5s ease;
+  isolation: isolate;
 }
 
-.category-card:is(:hover, :focus-within) {
+.category-card:is(:hover, :focus-within, .is-active) {
   --bs-card-border-radius: 20rem;
 }
 
@@ -56,12 +57,12 @@ body {
   pointer-events: none;
 }
 
-.category-card:is(:hover, :focus-within) .card-hover {
+.category-card:is(:hover, :focus-within, .is-active) .card-hover {
   opacity: 1;
   pointer-events: auto;
 }
 
-.category-card:is(:hover, :focus-within) .card-rest {
+.category-card:is(:hover, :focus-within, .is-active) .card-rest {
   opacity: 0;
 }
 
@@ -94,4 +95,31 @@ body {
 .btn-feature {
   --bs-btn-font-size: 0.75rem;
   --bs-btn-padding-y: 0.4rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #202020;
+}
+
+.footer-toggle .bi-dash-lg {
+  display: none;
+}
+.footer-toggle:not(.collapsed) .bi-plus-lg {
+  display: none;
+}
+.footer-toggle:not(.collapsed) .bi-dash-lg {
+  display: inline;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-margin {
+  margin-top: 80px;
 }

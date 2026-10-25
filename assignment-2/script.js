@@ -45,3 +45,40 @@ nextButton.addEventListener("click", function () {
 });
 
 startRotation();
+
+// Cards that open/zoom by themselves while scrolling (small screens only)
+const smallScreen = window.matchMedia("(max-width: 991.98px)");
+
+function activateOnScroll(cards, rootEl, rootMargin) {
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle(
+          "is-active",
+          smallScreen.matches && entry.isIntersecting,
+        );
+      });
+    },
+    { root: rootEl, rootMargin: rootMargin },
+  );
+
+  cards.forEach(function (card) {
+    observer.observe(card);
+  });
+
+  // When the window crosses the 992px line, reset and re-check every card
+  smallScreen.addEventListener("change", function () {
+    cards.forEach(function (card) {
+      observer.unobserve(card);
+      card.classList.remove("is-active");
+      observer.observe(card);
+    });
+  });
+}
+
+// Category cards: the one under a thin strip in the middle of the swipe row
+activateOnScroll(
+  document.querySelectorAll(".category-card"),
+  document.querySelector(".category-scroll"),
+  "0px -49% 0px -49%",
+);
