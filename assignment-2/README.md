@@ -4,13 +4,15 @@
 
 This project recreates the layout and visual style of the Allbirds e-commerce website as part of the Web Technologies course. It focuses on HTML structure, CSS styling, Bootstrap layout utilities, and responsive design.
 
-The project contains a homepage/product listing page and one static product detail page. The product detail page is for the **Women's Cruiser Slip On in Blizzard**. All eight Best Sellers product-title links on the homepage lead to this same `product.html` page.
+The project contains a homepage/product listing page and one static product detail page. The product detail page is for the **Women's Cruiser Slip On in Blizzard**. All eight Best Sellers product-title links on the homepage lead to this same `product.html` page, as required for this version of the assignment.
 
 ## Reference Website
 
 - **Name:** Allbirds
 - **URL:** https://www.allbirds.com/
 - **Reference screenshot:** `screenshots/reference-site.png`
+
+Add your screenshot of the reference website at the path shown above. The image will then display here on GitHub.
 
 ![Allbirds reference website screenshot](screenshots/reference-site.png)
 
@@ -44,17 +46,17 @@ The product page shows one fixed product. The buttons and selectors are interfac
 - **Bootstrap 5.3.3** — responsive grid, navbar, spacing, and layout utilities
 - **Bootstrap Icons** — interface icons
 - **Google Fonts** — Figtree and Newsreader typography
-- **JavaScript** — homepage interactions, including announcement rotation, mobile category-card behaviour, and Best Sellers arrow controls
+- **JavaScript** — small homepage interactions, including announcement rotation, mobile category-card behaviour, and Best Sellers arrow controls
 
 ## Responsive Testing
 
-Test the homepage and product detail page at the following viewport widths:
+Check the homepage and product detail page at the following viewport widths:
 
-| Device  | Viewport width |
-| ------- | -------------: |
-| Mobile  |         375 px |
-| Tablet  |         768 px |
-| Desktop |        1440 px |
+| Device | Viewport width |
+|---|---:|
+| Mobile | 375 px |
+| Tablet | 768 px |
+| Desktop | 1440 px |
 
 The completion PDF should contain screenshots of both pages at all three widths.
 
@@ -85,13 +87,13 @@ assignment-2/
     └── Featured Cards/
 ```
 
-The `screenshots/` folder and `completion.pdf` are submission items to add after capturing the evidence.
+The `screenshots/` folder and `completion.pdf` are submission items to add after capturing the evidence; they may not exist in the repository yet.
 
 ## How to Run
 
 1. Open the `assignment-2` folder in Visual Studio Code.
-2. Open `index.html` using Live Server, or serve the folder with a local web server.
-3. Click any Best Sellers product title to open `product.html`.
+2. Open `index.html` using the Live Server extension, or serve the folder with a local web server.
+3. Click a Best Sellers product title to open `product.html`.
 4. Use the browser's responsive/device toolbar to test mobile, tablet, and desktop widths.
 
 ## Scope and Limitations
@@ -100,4 +102,4 @@ This is a front-end layout assignment. The shopping bag, Add to Cart button, siz
 
 ## Completion Evidence
 
-The accompanying `completion.pdf` should include the Allbirds reference screenshot and responsive screenshots for the homepage and product detail page at mobile, tablet, and desktop widths.
+The accompanying `completion.pdf` should include the Allbirds reference screenshot and responsive screenshots for the homepage and product page at mobile, tablet, and desktop widths.
