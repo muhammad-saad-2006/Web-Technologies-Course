@@ -82,3 +82,33 @@ activateOnScroll(
   document.querySelector(".category-scroll"),
   "0px -49% 0px -49%",
 );
+
+// Best sellers: arrows move the row by one card
+const productRow = document.getElementById("product-row");
+const productPrev = document.getElementById("products-prev");
+const productNext = document.getElementById("products-next");
+
+function cardStep() {
+  const card = productRow.querySelector(".product-card");
+  const gap = parseFloat(getComputedStyle(productRow).columnGap) || 0;
+  return card.offsetWidth + gap;
+}
+
+function updateArrows() {
+  productPrev.disabled = productRow.scrollLeft <= 1;
+  productNext.disabled =
+    productRow.scrollLeft + productRow.clientWidth >=
+    productRow.scrollWidth - 1;
+}
+
+productPrev.addEventListener("click", function () {
+  productRow.scrollBy({ left: -cardStep(), behavior: "smooth" });
+});
+productNext.addEventListener("click", function () {
+  productRow.scrollBy({ left: cardStep(), behavior: "smooth" });
+});
+
+productRow.addEventListener("scroll", updateArrows);
+window.addEventListener("resize", updateArrows);
+window.addEventListener("load", updateArrows);
+updateArrows();

@@ -66,15 +66,39 @@ body {
   opacity: 0;
 }
 
-.category-scroll {
+.category-scroll,
+.product_scroll {
   scroll-snap-type: x mandatory;
   scrollbar-width: none; /* hide the scrollbar (Firefox) */
 }
-.category-scroll::-webkit-scrollbar {
+.category-scroll::-webkit-scrollbar,
+.product_scroll::-webkit-scrollbar {
   display: none; /* hide the scrollbar (Chrome, Safari, Edge) */
 }
-.category-scroll > * {
+.category-scroll > *,
+.product_scroll > * {
   scroll-snap-align: start;
+}
+
+/* Best Seller */
+.product-card {
+  width: 78%; /* phones: one card plus a peek of the next */
+}
+@media (min-width: 576px) {
+  .product-card {
+    width: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .product-card {
+    width: 27%; /* about 3.6 cards visible, like the original */
+  }
+}
+
+.badge-new {
+  background-color: #e4dfd6;
+  color: #222;
+  letter-spacing: 0.05em;
 }
 
 /* Featured Cards */
