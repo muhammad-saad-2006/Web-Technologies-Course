@@ -67,16 +67,16 @@ body {
 }
 
 .category-scroll,
-.product_scroll {
+.product-scroll {
   scroll-snap-type: x mandatory;
   scrollbar-width: none; /* hide the scrollbar (Firefox) */
 }
 .category-scroll::-webkit-scrollbar,
-.product_scroll::-webkit-scrollbar {
+.product-scroll::-webkit-scrollbar {
   display: none; /* hide the scrollbar (Chrome, Safari, Edge) */
 }
 .category-scroll > *,
-.product_scroll > * {
+.product-scroll > * {
   scroll-snap-align: start;
 }
 
