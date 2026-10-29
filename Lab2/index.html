@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab 2 - Responsive Navbar and Grid</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="bg-white border-bottom">
+      <nav class="navbar navbar-expand-md py-3">
+        <div class="container-fluid nav-container">
+          <!-- Logo -->
+          <a class="navbar-brand fw-semibold" href="#top"> Everyday Store </a>
+
+          <!-- CSS-only hamburger: no JavaScript -->
+          <input
+            class="menu-toggle"
+            type="checkbox"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+          />
+          <label
+            class="menu-toggle-label navbar-toggler"
+            for="menu-toggle"
+            aria-hidden="true"
+            >☰</label
+          >
+
+          <!-- Navigation links and cart -->
+          <div class="navbar-collapse nav-menu" id="main-navigation">
+            <ul class="navbar-nav nav-links">
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">New Arrivals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+
+            <a
+              class="nav-cart text-decoration-none"
+              href="#cart"
+              aria-label="Shopping cart"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 9H6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="10" cy="20" r="1" fill="currentColor" />
+                <circle cx="18" cy="20" r="1" fill="currentColor" />
+              </svg>
+              Cart
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="container-fluid py-4 py-md-5">
+      <section id="about" class="mb-4">
+        <h1 class="h2 mb-2">Everyday Shoes</h1>
+        <p class="text-secondary mb-0">
+          A simple responsive product grid built with Bootstrap.
+        </p>
+      </section>
+
+      <section id="products">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="h4 mb-0">Popular Products</h2>
+          <span class="small text-secondary">8 products</span>
+        </div>
+
+        <!-- Bootstrap grid: 1 phone / 2 tablet / 4 desktop -->
+        <div
+          class="product-grid row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3"
+        >
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Everyday Runner</h3>
+                <p class="text-secondary small mb-2">Sage / Natural</p>
+                <p class="fw-semibold mb-3">$88</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Coast Slip-On</h3>
+                <p class="text-secondary small mb-2">Slate Blue</p>
+                <p class="fw-semibold mb-3">$76</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Cloud Knit</h3>
+                <p class="text-secondary small mb-2">Dusty Rose</p>
+                <p class="fw-semibold mb-3">$92</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Weekend Canvas</h3>
+                <p class="text-secondary small mb-2">Oat / Cream</p>
+                <p class="fw-semibold mb-3">$68</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Pathfinder Knit</h3>
+                <p class="text-secondary small mb-2">Soft Grey</p>
+                <p class="fw-semibold mb-3">$98</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">City Low</h3>
+                <p class="text-secondary small mb-2">Charcoal</p>
+                <p class="fw-semibold mb-3">$84</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Air Knit</h3>
+                <p class="text-secondary small mb-2">Sky / White</p>
+                <p class="fw-semibold mb-3">$89</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100">
+              <img
+                src="images/shoe-placeholder.svg"
+                class="card-img-top"
+                alt="Placeholder sneaker"
+              />
+              <div class="card-body">
+                <h3 class="h6 card-title">Field Runner</h3>
+                <p class="text-secondary small mb-2">Olive / Stone</p>
+                <p class="fw-semibold mb-3">$94</p>
+                <button class="btn btn-outline-dark btn-sm" type="button">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-top bg-white py-3 mt-4">
+      <div
+        class="container-fluid d-flex flex-column flex-sm-row justify-content-between gap-2 small text-secondary"
+      >
+        <span>Everyday Store</span>
+        <span>Lab 2 - Responsive Navbar and Grid Drill</span>
+      </div>
+    </footer>
+  </body>
+</html>

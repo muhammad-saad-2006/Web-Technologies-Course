@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sneaker placeholder</title>
+  <desc id="desc">A simple grey outline illustration of a sneaker on a light background.</desc>
+  <rect width="640" height="420" fill="#f0f0f0"/>
+  <ellipse cx="328" cy="316" rx="210" ry="18" fill="#dedede"/>
+  <path d="M119 258 C155 253 177 215 204 181 C227 153 261 146 288 166 L350 213 C381 235 418 248 464 251 L516 256 C540 259 555 272 555 289 C555 305 539 314 515 314 L158 314 C126 314 107 300 107 280 C107 271 111 263 119 258 Z" fill="#d5d5d5" stroke="#555555" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M120 282 C205 297 389 294 543 285" fill="none" stroke="#777777" stroke-width="5" stroke-linecap="round"/>
+  <path d="M216 185 C235 195 253 211 270 229 M250 181 L231 211 M278 194 L260 224 M306 208 L288 237 M334 226 L317 249" fill="none" stroke="#777777" stroke-width="5" stroke-linecap="round"/>
+  <path d="M168 247 C188 253 207 258 224 259" fill="none" stroke="#888888" stroke-width="4" stroke-linecap="round"/>
+</svg>

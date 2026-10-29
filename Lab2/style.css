@@ -1,0 +1,92 @@
+/* Page background */
+body {
+  background: #f8f8f8;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-cart {
+  white-space: nowrap;
+  color: #212529;
+}
+
+/* CSS-only hamburger toggle */
+.menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.menu-toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible + .menu-toggle-label {
+  outline: 2px solid #212529;
+  outline-offset: 3px;
+}
+
+.card-img-top {
+  background: #eeeeee;
+}
+
+/* Phone layout: below 768px */
+@media (max-width: 767.98px) {
+  .menu-toggle-label {
+    display: inline-block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  /* Show the menu when the checkbox is checked */
+  .menu-toggle:checked ~ .nav-menu {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-links .nav-link {
+    padding: 0.6rem 0;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .nav-cart {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+}
