@@ -12,8 +12,6 @@ The project contains a homepage/product listing page and one static product deta
 - **URL:** https://www.allbirds.com/
 - **Reference screenshot:** `screenshots/reference-site.png`
 
-Add your screenshot of the reference website at the path shown above. The image will then display here on GitHub.
-
 ![Allbirds reference website screenshot](screenshots/reference-site.png)
 
 ## Pages and Features
@@ -52,11 +50,11 @@ The product page shows one fixed product. The buttons and selectors are interfac
 
 Check the homepage and product detail page at the following viewport widths:
 
-| Device | Viewport width |
-|---|---:|
-| Mobile | 375 px |
-| Tablet | 768 px |
-| Desktop | 1440 px |
+| Device  | Viewport width |
+| ------- | -------------: |
+| Mobile  |         375 px |
+| Tablet  |         768 px |
+| Desktop |        1440 px |
 
 The completion PDF should contain screenshots of both pages at all three widths.
 
