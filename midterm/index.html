@@ -361,13 +361,38 @@
           </div>
         </div>
 
+        <!-- Task 1: CSS-only category filter. -->
+        <div class="midterm-controls mb-3">
+          <p class="small text-uppercase fw-semibold mb-2">Filter by category</p>
+          <div class="category-filters" role="group" aria-label="Filter products by category">
+            <input type="radio" name="category-filter" id="filter-all" value="all" checked>
+            <label for="filter-all">All</label>
+            <input type="radio" name="category-filter" id="filter-women" value="women">
+            <label for="filter-women">Women's Shoes</label>
+            <input type="radio" name="category-filter" id="filter-men" value="men">
+            <label for="filter-men">Men's Shoes</label>
+            <input type="radio" name="category-filter" id="filter-slip-on" value="slip-on">
+            <label for="filter-slip-on">Slip On</label>
+            <input type="radio" name="category-filter" id="filter-cruiser" value="cruiser">
+            <label for="filter-cruiser">Cruiser</label>
+          </div>
+        </div>
+
+        <!-- Task 3: live search and price sort. -->
+        <div class="midterm-search-row d-flex flex-wrap gap-2 align-items-center mb-3">
+          <label class="visually-hidden" for="product-search">Search products</label>
+          <input id="product-search" class="form-control" type="search" placeholder="Search products..." autocomplete="off">
+          <button id="sort-price" class="btn btn-outline-dark" type="button">Sort by price</button>
+        </div>
+        <p id="no-products-message" class="text-center py-5" role="status" hidden>No products found</p>
+
         <!-- Products -->
         <div
           id="product-row"
           class="product-scroll d-flex gap-2 overflow-x-auto"
         >
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="women slip-on cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -398,7 +423,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="women slip-on" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -429,7 +454,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="women slip-on" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -460,7 +485,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="women cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -491,7 +516,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="women runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -522,7 +547,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="men slip-on runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -553,7 +578,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="men slip-on runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -584,7 +609,7 @@
           </article>
 
           <article
-            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="men cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
