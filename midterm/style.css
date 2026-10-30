@@ -148,7 +148,6 @@ body {
   margin-top: 80px;
 }
 
-
 /* Product detail page */
 .product-announcement {
   background-color: #202020;
@@ -342,7 +341,6 @@ body {
   }
 }
 
-
 /* Midterm personal values: N=76, BP=676px, H=172deg, K=4 */
 :root {
   --midterm-accent: hsl(172, 70%, 45%);
@@ -377,10 +375,18 @@ body {
 }
 
 /* CSS-only category filtering: :has() detects which radio is checked. */
-#best-sellers:has(#filter-women:checked) #product-row .product-card:not([data-category*="women"]),
-#best-sellers:has(#filter-men:checked) #product-row .product-card:not([data-category*="men"]),
-#best-sellers:has(#filter-slip-on:checked) #product-row .product-card:not([data-category*="slip-on"]),
-#best-sellers:has(#filter-cruiser:checked) #product-row .product-card:not([data-category*="cruiser"]) {
+#best-sellers:has(#filter-cruiser:checked)
+  #product-row
+  .product-card:not([data-category="cruiser"]),
+#best-sellers:has(#filter-canvas:checked)
+  #product-row
+  .product-card:not([data-category="canvas"]),
+#best-sellers:has(#filter-runner:checked)
+  #product-row
+  .product-card:not([data-category="runner"]),
+#best-sellers:has(#filter-tree:checked)
+  #product-row
+  .product-card:not([data-category="tree"]) {
   display: none;
 }
 
@@ -420,9 +426,18 @@ body {
     "description";
   gap: 1.5rem;
 }
-.product-layout-image { grid-area: image; min-width: 0; }
-.product-layout-details { grid-area: details; min-width: 0; }
-.product-layout-description { grid-area: description; min-width: 0; }
+.product-layout-image {
+  grid-area: image;
+  min-width: 0;
+}
+.product-layout-details {
+  grid-area: details;
+  min-width: 0;
+}
+.product-layout-description {
+  grid-area: description;
+  min-width: 0;
+}
 
 @media (min-width: 676px) {
   .product-layout {

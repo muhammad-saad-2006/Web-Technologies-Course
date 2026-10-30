@@ -363,28 +363,83 @@
 
         <!-- Task 1: CSS-only category filter. -->
         <div class="midterm-controls mb-3">
-          <p class="small text-uppercase fw-semibold mb-2">Filter by category</p>
-          <div class="category-filters" role="group" aria-label="Filter products by category">
-            <input type="radio" name="category-filter" id="filter-all" value="all" checked>
+          <p class="small text-uppercase fw-semibold mb-2">
+            Filter by category
+          </p>
+          <div
+            class="category-filters"
+            role="group"
+            aria-label="Filter products by category"
+          >
+            <input
+              type="radio"
+              name="category-filter"
+              id="filter-all"
+              value="all"
+              checked
+            />
             <label for="filter-all">All</label>
-            <input type="radio" name="category-filter" id="filter-women" value="women">
-            <label for="filter-women">Women's Shoes</label>
-            <input type="radio" name="category-filter" id="filter-men" value="men">
-            <label for="filter-men">Men's Shoes</label>
-            <input type="radio" name="category-filter" id="filter-slip-on" value="slip-on">
-            <label for="filter-slip-on">Slip On</label>
-            <input type="radio" name="category-filter" id="filter-cruiser" value="cruiser">
+
+            <input
+              type="radio"
+              name="category-filter"
+              id="filter-cruiser"
+              value="cruiser"
+            />
             <label for="filter-cruiser">Cruiser</label>
+
+            <input
+              type="radio"
+              name="category-filter"
+              id="filter-canvas"
+              value="canvas"
+            />
+            <label for="filter-canvas">Canvas</label>
+
+            <input
+              type="radio"
+              name="category-filter"
+              id="filter-runner"
+              value="runner"
+            />
+            <label for="filter-runner">Runner</label>
+
+            <input
+              type="radio"
+              name="category-filter"
+              id="filter-tree"
+              value="tree"
+            />
+            <label for="filter-tree">Tree Runner</label>
           </div>
         </div>
 
         <!-- Task 3: live search and price sort. -->
-        <div class="midterm-search-row d-flex flex-wrap gap-2 align-items-center mb-3">
-          <label class="visually-hidden" for="product-search">Search products</label>
-          <input id="product-search" class="form-control" type="search" placeholder="Search products..." autocomplete="off">
-          <button id="sort-price" class="btn btn-outline-dark" type="button">Sort by price</button>
+        <div
+          class="midterm-search-row d-flex flex-wrap gap-2 align-items-center mb-3"
+        >
+          <label class="visually-hidden" for="product-search"
+            >Search products</label
+          >
+          <input
+            id="product-search"
+            class="form-control"
+            type="search"
+            placeholder="Search products..."
+            autocomplete="off"
+          />
+          <button id="sort-price" class="btn btn-outline-dark" type="button">
+            Sort by price
+          </button>
         </div>
-        <p id="no-products-message" class="text-center py-5" role="status" hidden>No products found</p>
+        <p
+          id="no-products-message"
+          class="text-center py-5"
+          role="status"
+          hidden
+        >
+          No products found
+        </p>
 
         <!-- Products -->
         <div
@@ -392,7 +447,8 @@
           class="product-scroll d-flex gap-2 overflow-x-auto"
         >
           <article
-            data-category="women slip-on cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="cruiser"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -405,7 +461,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Cruiser Slip On</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Women's Cruiser Slip On</a
+                >
               </h5>
               <p class="small mb-3">Blizzard</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -423,7 +483,8 @@
           </article>
 
           <article
-            data-category="women slip-on" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="canvas"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -436,7 +497,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Canvas Cruiser Slip On</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Women's Canvas Cruiser Slip On</a
+                >
               </h5>
               <p class="small mb-3">Warm White</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -454,7 +519,8 @@
           </article>
 
           <article
-            data-category="women slip-on" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="runner"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -467,7 +533,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Runner NZ Slip On</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Women's Runner NZ Slip On</a
+                >
               </h5>
               <p class="small mb-3">Mushroom</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -485,7 +555,8 @@
           </article>
 
           <article
-            data-category="women cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="canvas"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -498,7 +569,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Canvas Cruiser</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Women's Canvas Cruiser</a
+                >
               </h5>
               <p class="small mb-3">Sea Spray</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -516,7 +591,8 @@
           </article>
 
           <article
-            data-category="women runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="tree"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -529,7 +605,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Tree Runner NZ</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Women's Tree Runner NZ</a
+                >
               </h5>
               <p class="small mb-3">Medium Grey</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -547,7 +627,8 @@
           </article>
 
           <article
-            data-category="men slip-on runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="runner"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -560,7 +641,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Men's Runner NZ Slip On</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Men's Runner NZ Slip On</a
+                >
               </h5>
               <p class="small mb-3">Mushroom</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -578,7 +663,8 @@
           </article>
 
           <article
-            data-category="men slip-on runner" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="runner"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -591,7 +677,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Mens Runner NZ Slip On</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Mens Runner NZ Slip On</a
+                >
               </h5>
               <p class="small mb-3">Dark Navy</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -609,7 +699,8 @@
           </article>
 
           <article
-            data-category="men cruiser" class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+            data-category="cruiser"
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
           >
             <span
               class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
@@ -622,7 +713,11 @@
             />
             <div class="card-body px-3 pt-0 pb-3">
               <h5 class="small fw-semibold text-uppercase mb-0">
-                <a href="product.html" class="stretched-link text-dark text-decoration-none">Mens Cruiser</a>
+                <a
+                  href="product.html"
+                  class="stretched-link text-dark text-decoration-none"
+                  >Mens Cruiser</a
+                >
               </h5>
               <p class="small mb-3">Medium Grey</p>
               <div class="d-flex justify-content-between align-items-center">
