@@ -79,3 +79,84 @@ if (productRow && productPrev && productNext) {
   window.addEventListener("load", updateArrows);
   updateArrows();
 }
+
+
+// Task 3: live search and sorting of the existing HTML product cards.
+const productSearch = document.getElementById("product-search");
+const sortPriceButton = document.getElementById("sort-price");
+const noProductsMessage = document.getElementById("no-products-message");
+const categoryRadios = document.querySelectorAll('input[name="category-filter"]');
+
+if (productRow) {
+  const originalCards = Array.from(productRow.querySelectorAll(".product-card"));
+  let highestPriceFirst = false;
+
+  // Add a Premium label on page load (N x 100 = $7,600).
+  originalCards.forEach((card) => {
+    const priceText = card.querySelector(".card-body .fw-semibold").textContent;
+    const price = Number(priceText.replace(/[^0-9.]/g, ""));
+
+    if (price > 7600 && !card.querySelector(".premium-label")) {
+      const label = document.createElement("span");
+      label.className = "premium-label";
+      label.textContent = "Premium";
+      card.appendChild(label);
+    }
+  });
+
+  // Cards must match the search text AND the selected category.
+  function updateProductVisibility() {
+    const searchText = productSearch ? productSearch.value.trim().toLowerCase() : "";
+    const selectedFilter = document.querySelector('input[name="category-filter"]:checked');
+    const selectedCategory = selectedFilter ? selectedFilter.value : "all";
+    let visibleCount = 0;
+
+    originalCards.forEach((card) => {
+      const productName = card.querySelector("h5 a").textContent.toLowerCase();
+      const category = card.dataset.category || "";
+      const matchesSearch = productName.includes(searchText);
+      const matchesCategory =
+        selectedCategory === "all" || category.includes(selectedCategory);
+
+      card.classList.toggle("is-search-hidden", !matchesSearch);
+      if (matchesSearch && matchesCategory) visibleCount++;
+    });
+
+    if (noProductsMessage) {
+      noProductsMessage.hidden = visibleCount !== 0;
+    }
+  }
+
+  if (productSearch) {
+    productSearch.addEventListener("input", updateProductVisibility);
+  }
+  categoryRadios.forEach((radio) => {
+    radio.addEventListener("change", updateProductVisibility);
+  });
+
+  // Read the price from each card, then move the existing card nodes.
+  if (sortPriceButton) {
+    sortPriceButton.addEventListener("click", () => {
+      highestPriceFirst = !highestPriceFirst;
+      const cards = Array.from(productRow.querySelectorAll(".product-card"));
+
+      cards.sort((cardA, cardB) => {
+        const priceA = Number(
+          cardA.querySelector(".card-body .fw-semibold").textContent.replace(/[^0-9.]/g, "")
+        );
+        const priceB = Number(
+          cardB.querySelector(".card-body .fw-semibold").textContent.replace(/[^0-9.]/g, "")
+        );
+        return highestPriceFirst ? priceB - priceA : priceA - priceB;
+      });
+
+      cards.forEach((card) => productRow.appendChild(card));
+      sortPriceButton.textContent = highestPriceFirst
+        ? "Sort: High to Low"
+        : "Sort: Low to High";
+      updateProductVisibility();
+    });
+  }
+
+  updateProductVisibility();
+}
