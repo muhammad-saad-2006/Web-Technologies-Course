@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Allbirds: Comfortable, Sustainable Shoes and Apparel</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sticky header -->
+    <header class="sticky-top">
+      <!-- Announcement bar -->
+      <div
+        class="announcement-bar bg-dark text-white d-flex align-items-center justify-content-between position-relative px-1 py-2"
+      >
+        <button
+          class="d-flex bg-transparent border-0 p-0 text-white"
+          id="previous-announcement"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <p
+          id="announcement-message"
+          class="position-absolute start-0 end-0 px-5 m-0 text-center lh-1 pe-none"
+        >
+          Due to increased demand, orders may take up to 30 days to ship.
+        </p>
+        <button
+          class="d-flex bg-transparent border-0 p-0 text-white"
+          id="next-announcement"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg bg-white rounded-4 shadow-sm position-absolute top-100 start-0 end-0 mx-3 mt-3 px-3 py-0 py-lg-1"
+      >
+        <button
+          class="navbar-toggler border-0 p-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-menu"
+        >
+          <i class="bi bi-list fs-5"></i>
+        </button>
+
+        <a class="navbar-brand mx-auto mx-lg-0" href="#">
+          <img
+            src="images/allbirds-logo.png"
+            alt="Allbirds logo"
+            height="30"
+            class="d-block"
+          />
+        </a>
+
+        <div
+          class="collapse navbar-collapse order-last order-lg-0"
+          id="main-menu"
+        >
+          <ul
+            class="navbar-nav flex-grow-1 justify-content-center gap-lg-4 text-uppercase fw-semibold small"
+          >
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="#">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="#">Shop All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-dark" href="#">Women</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex gap-3 fs-5">
+          <button class="bg-transparent border-0 p-0 text-dark">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="bg-transparent border-0 p-0 text-dark">
+            <i class="bi bi-bag"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Page Content -->
+    <main class="p-2">
+      <section class="hero position-relative w-100 overflow-hidden rounded-5">
+        <picture>
+          <source
+            media="(max-width: 991.98px)"
+            srcset="images/hero-campaign-mobile.png"
+          />
+          <img
+            src="images/hero-campaign.png"
+            alt="Allbirds footwear campaign"
+            class="d-block w-100 h-100 object-fit-cover"
+          />
+        </picture>
+
+        <div
+          class="position-absolute bottom-0 start-0 end-0 p-4 p-lg-5 text-white d-flex flex-column align-items-start align-items-lg-end text-lg-end"
+        >
+          <p class="hero-eyebrow font-monospace text-uppercase mb-2">
+            All new Dasher NZ collection
+          </p>
+          <h1 class="fs-4 fw-normal mb-3">Wildly Comfortable. Super Natural</h1>
+          <div class="d-flex gap-2">
+            <a
+              href="men.html"
+              class="btn btn-hero btn-sm rounded-pill px-4 text-uppercase fw-semibold"
+              >Shop Men</a
+            >
+            <a
+              href="women.html"
+              class="btn btn-hero btn-sm rounded-pill px-4 text-uppercase fw-semibold"
+              >Shop Women</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="mt-3">
+        <div class="row g-2 flex-nowrap overflow-x-auto category-scroll">
+          <!-- New Arrivals -->
+          <div class="col-9 col-sm-5 col-lg-3">
+            <article
+              class="card category-card bg-transparent border-0 overflow-hidden"
+            >
+              <img
+                src="images/Cards/new-arrivals.png"
+                alt="New Arrivals"
+                class="card-img rounded-0"
+              />
+              <div
+                class="card-img-overlay card-rest d-flex flex-column align-items-center justify-content-center pe-none"
+              >
+                <span
+                  class="btn btn-outline-light btn-card btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                  >New Arrivals</span
+                >
+              </div>
+
+              <div
+                class="card-img-overlay card-hover d-flex flex-column align-items-center justify-content-center"
+              >
+                <p class="fs-6 fw-semibold text-uppercase text-white mb-3">
+                  New Arrivals
+                </p>
+                <div class="d-flex flex-column gap-2">
+                  <a
+                    href="mens.hmtl"
+                    class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                    >Shop Men</a
+                  >
+                  <a
+                    href="women.html"
+                    class="btn btn-outline-light btn-sm rounded-pill border-2 px-4 text-uppercase fw-semibold"
+                    >Shop Women</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Mens -->
+          <div class="col-9 col-sm-5 col-lg-3">
+            <article
+              class="card category-card bg-transparent border-0 overflow-hidden"
+            >
+              <img
+                src="images/Cards/mens.png"
+                alt="Men"
+                class="card-img rounded-0"
+              />
+
+              <div
+                class="card-img-overlay card-rest d-flex flex-column align-items-center justify-content-center pe-none"
+              >
+                <span
+                  class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                  >Mens</span
+                >
+              </div>
+
+              <div
+                class="card-img-overlay card-hover d-flex flex-column align-items-center justify-content-center"
+              >
+                <p class="fs-6 fw-semibold text-uppercase text-white mb-3">
+                  Mens
+                </p>
+                <a
+                  href="mens.html"
+                  class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                  >Shop Men</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Women -->
+          <div class="col-9 col-sm-5 col-lg-3">
+            <article
+              class="card category-card bg-transparent border-0 overflow-hidden"
+            >
+              <img
+                src="images/Cards/women.png"
+                alt="Women"
+                class="card-img rounded-0"
+              />
+
+              <div
+                class="card-img-overlay card-rest d-flex align-items-center justify-content-center pe-none"
+              >
+                <span
+                  class="btn btn-outline-light border-2 btn-sm rounded-pill px-4 text-uppercase fw-semibold"
+                  >Women</span
+                >
+              </div>
+
+              <div
+                class="card-img-overlay card-hover d-flex flex-column align-items-center justify-content-center"
+              >
+                <p class="fs-6 fw-semibold text-uppercase text-white mb-3">
+                  Women
+                </p>
+                <a
+                  href="women.html"
+                  class="btn btn-outline-light border-2 btn-sm rounded-pill px-4 text-uppercase fw-semibold"
+                  >Shop Women</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Best Seller -->
+          <div class="col-9 col-sm-5 col-lg-3">
+            <article
+              class="card category-card bg-transparent border-0 overflow-hidden"
+            >
+              <img
+                src="images/Cards/best-seller.png"
+                alt="Best Seller"
+                class="card-img rounded-0"
+              />
+
+              <div
+                class="card-img-overlay card-rest d-flex align-items-center justify-content-center"
+              >
+                <span
+                  class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                  >Best Seller</span
+                >
+              </div>
+
+              <div
+                class="card-img-overlay card-hover d-flex flex-column align-items-center justify-content-center"
+              >
+                <p class="fs-6 fw-semibold text-uppercase text-white mb-3">
+                  Best Seller
+                </p>
+                <div class="d-flex flex-column gap-2">
+                  <a
+                    href="mens.html"
+                    class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                    >Shop Men</a
+                  >
+                  <a
+                    href="womens.html"
+                    class="btn btn-outline-light btn-sm border-2 rounded-pill px-4 text-uppercase fw-semibold"
+                    >Shop Women</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Best Selling Products -->
+      <section id="best-sellers" class="mt-5">
+        <div
+          class="d-flex align-items-center justify-content-between px-2 mb-3"
+        >
+          <h5
+            class="font-monospace border-bottom text-uppercase fw-normal border-dark border-2"
+          >
+            Best Sellers
+          </h5>
+
+          <!-- Arrows -->
+          <div class="d-none d-md-flex gap-2">
+            <button
+              id="products-prev"
+              class="btn rounded-circle btn-outline-dark lh-1 p-2"
+              type="button"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button
+              id="products-next"
+              class="btn btn-outline-dark rounded-circle lh-1 p-2"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div
+          id="product-row"
+          class="product-scroll d-flex gap-2 overflow-x-auto"
+        >
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/women_cruiser_slip_on.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Cruiser Slip On</a>
+              </h5>
+              <p class="small mb-3">Blizzard</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$100</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/women_canvas_cruiser_slip_on.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Canvas Cruiser Slip On</a>
+              </h5>
+              <p class="small mb-3">Warm White</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$75</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/women_runner_nz_slip_on.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Runner NZ Slip On</a>
+              </h5>
+              <p class="small mb-3">Mushroom</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$105</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/women_canvas_cruiser.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Canvas Cruiser</a>
+              </h5>
+              <p class="small mb-3">Sea Spray</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$75</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/womens_tree_runner_nz.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Women's Tree Runner NZ</a>
+              </h5>
+              <p class="small mb-3">Medium Grey</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$100</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/mens_runner_nz.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Men's Runner NZ Slip On</a>
+              </h5>
+              <p class="small mb-3">Mushroom</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$105</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/mens_runner_nz_1.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Mens Runner NZ Slip On</a>
+              </h5>
+              <p class="small mb-3">Dark Navy</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$105</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+
+          <article
+            class="card product-card border-1 rounded-4 overflow-hidden flex-shrink-0 position-relative"
+          >
+            <span
+              class="badge badge-new rounded-pill text-uppercase fw-semibold position-absolute top-0 start-0 m-3"
+              >New</span
+            >
+            <img
+              src="images/Best Sellers/mens_cruiser.png"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-3 pt-0 pb-3">
+              <h5 class="small fw-semibold text-uppercase mb-0">
+                <a href="product.html" class="stretched-link text-dark text-decoration-none">Mens Cruiser</a>
+              </h5>
+              <p class="small mb-3">Medium Grey</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$105</span>
+                <a
+                  href="#"
+                  class="position-relative z-2 small fw-semibold text-uppercase text-dark text-decoration-none"
+                >
+                  <i class="bi bi-bag"></i>
+                  <span class="d-none d-md-inline">Quick </span>Add
+                </a>
+              </div>
+              <p class="d-md-none small text-secondary mt-1 mb-0">11 sizes</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured cards -->
+      <section class="mt-3">
+        <div class="row gx-2 gy-4 gy-lg-2">
+          <!-- Summer Travel Essentials -->
+          <div class="col-12 col-lg-4">
+            <article
+              class="card bg-transparent border-0 rounded-5 overflow-hidden"
+            >
+              <img
+                src="images/Featured Cards/summer-travel-essential.png"
+                class="card-img rounded-0 object-fit-cover feature-img"
+                alt=""
+              />
+
+              <div
+                class="card-img-overlay bg-black bg-opacity-25 d-flex flex-column p-3"
+              >
+                <h2
+                  class="feature-title display-6 text-white text-center my-auto"
+                >
+                  Summer Travels Essentials
+                </h2>
+                <div class="d-flex gap-2">
+                  <a
+                    href="mens.html"
+                    class="btn btn-outline-light btn-feature rounded-pill text-uppercase fw-semibold flex-fill"
+                    >Shop Men</a
+                  >
+                  <a
+                    href="women.html"
+                    class="btn btn-outline-light btn-feature rounded-pill text-uppercase fw-semibold flex-fill"
+                    >Shop Women</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- New Arrival -->
+          <div class="col-12 col-lg-4">
+            <article
+              class="card bg-transparent rounded-5 border-0 overflow-hidden"
+            >
+              <img
+                src="images/Featured Cards/new-arrivals.png"
+                alt=""
+                class="card-img rounded-0 object-fit-cover feature-img"
+              />
+
+              <div
+                class="card-img-overlay bg-black bg-opacity-25 d-flex flex-column p-3"
+              >
+                <h2
+                  class="feature-title display-6 text-white text-center my-auto"
+                >
+                  New Arrivals
+                </h2>
+                <div class="d-flex gap-2">
+                  <a
+                    href="mens.html"
+                    class="btn btn-outline-light btn-feature rounded-pill text-uppercase fw-semibold flex-fill"
+                    >Shop Men</a
+                  >
+                  <a
+                    href="women.html"
+                    class="btn btn-outline-light btn-feature rounded-pill text-uppercase fw-semibold flex-fill"
+                    >Shop Women</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Fresh Colors for Summer -->
+          <div class="col-12 col-lg-4">
+            <article
+              class="card border-0 rounded-5 bg-transparent overflow-hidden"
+            >
+              <img
+                src="images/Featured Cards/fresh-colors-for-summer.png"
+                alt=""
+                class="card-img rounded-0 object-fit-cover feature-img"
+              />
+
+              <div
+                class="card-img-overlay bg-black bg-opacity-25 d-flex flex-column p-3"
+              >
+                <h2
+                  class="feature-title text-white text-center display-6 my-auto"
+                >
+                  Fresh Colors For Summer
+                </h2>
+                <div class="d-flex">
+                  <a
+                    href="women.html"
+                    class="btn btn-outline-light btn-feature rounded-pill text-uppercase fw-semibold flex-fill"
+                    >Shop Women</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="mt-3">
+        <div class="row g-2 justify-content-center">
+          <!-- Note 1 -->
+          <div class="col-12 col-lg-4">
+            <div class="h-100 bg-white rounded-4 p-4 pb-5">
+              <p class="font-monospace text-uppercase mb-3">
+                Wear All Day Comfort
+              </p>
+              <p class="small mb-0">
+                Lightweight, bouncy, and wildly comfortable, Allbirds shoes make
+                any outing feel effortless. Slip in, lace up, or slide them on
+                and enjoy the comfy support.
+              </p>
+            </div>
+          </div>
+
+          <!-- Note 2 -->
+          <div class="col-12 col-lg-4">
+            <div class="h-100 rounded-4 p-4 bp-5 bg-white">
+              <p class="font-monospace text-uppercase mb-3">
+                Designed For Everyday Wear
+              </p>
+              <p class="small mb-0">
+                Easy-to-wear styles made for daily routines, weekend plans,
+                travel, and everything in between.
+              </p>
+            </div>
+          </div>
+
+          <!-- Note 3 -->
+          <div class="col-12 col-lg-4">
+            <div class="h-100 rounded-4 p-4 pb-5 bg-white">
+              <p class="font-monospace text-uppercase mb-3">
+                Material from the Earth
+              </p>
+              <p class="small mb-0">
+                We replace petroleum-based synthetics with natural alternatives
+                wherever we can. Like using wool, tree fiber, and sugarcane.
+                They’re soft, breathable, and better for the planet—win, win,
+                win.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer text-white">
+      <div class="px-4 px-md-5 pt-5 pb-5 pb-md-4">
+        <!-- Footer Content -->
+
+        <div class="row gy-5 mt-md-4">
+          <!-- Subscription field -->
+          <div class="col-lg-6">
+            <p class="font-monospace text-uppercase mb-3 mb-md-4">
+              Subscribe to our emails
+            </p>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-8">
+                <form class="input-group bg-white rounded-pill overflow-hidden">
+                  <input
+                    type="email"
+                    class="form-control border-0 shadow-none px-4"
+                    placeholder="Email Address"
+                  />
+                  <button
+                    class="btn border-0 fw-semibold text-uppercase small px-4"
+                    type="submit"
+                  >
+                    Sign up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Column -->
+          <div class="col-lg-6">
+            <div class="row">
+              <!-- Help -->
+              <div class="col-md-3">
+                <button
+                  class="footer-toggle collapsed d-flex d-md-none justify-content-between align-item-center bg-transparent w-100 text-white text-uppercase border-0 px-0 py-3 font-monospace"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#footer-help"
+                >
+                  Help<i class="bi bi-plus-lg"></i>
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+                <h2
+                  class="d-none d-md-block font-monospace text-uppercase fw-normal mb-4"
+                >
+                  Help
+                </h2>
+                <div class="collapse d-md-block" id="footer-help">
+                  <ul
+                    class="footer-links list-unstyled d-flex flex-column gap-3 small pb-3 pb-md-0 mb-0"
+                  >
+                    <li>
+                      <a href="mailto:help@allbirds.com">help@allbirds.com</a>
+                    </li>
+                    <li><a href="#">FAQ/Contact Us</a></li>
+                    <li><a href="#">Returns/Exchanges</a></li>
+                  </ul>
+                </div>
+                <hr class="d-md-none my-0" />
+              </div>
+
+              <!-- Shop -->
+              <div class="col-md-3">
+                <button
+                  class="footer-toggle collapsed d-flex d-md-none text-uppercase justify-content-between align-items-center bg-transparent text-white w-100 border-0 px-0 py-3 font-monospace"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#footer-shop"
+                >
+                  Shop <i class="bi bi-plus-lg"></i>
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+                <h2
+                  class="d-none d-md-block font-monospace text-uppercase fw-normal mb-4"
+                >
+                  Shop
+                </h2>
+                <div class="d-md-block collapse" id="footer-shop">
+                  <ul
+                    class="footer-links list-unstyled d-flex flex-column small gap-3 pb-3 pb-md-0 mb-0"
+                  >
+                    <li><a href="mens.html">Men's Shoes</a></li>
+                    <li><a href="womens.html">Women's Shoes</a></li>
+                    <li><a href="mens.html">Men's Apparel</a></li>
+                    <li><a href="womens.html">Women's Apparel</a></li>
+                  </ul>
+                </div>
+                <hr class="d-md-none my-0" />
+              </div>
+              <!-- Company -->
+              <div class="col-md-6">
+                <button
+                  class="footer-toggle collapsed d-flex d-md-none text-uppercase w-100 text-white border-0 justify-content-between align-items-center bg-transparent px-0 py-3 font-monospace"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#footer-company"
+                >
+                  Company <i class="bi bi-plus-lg"></i>
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+                <h2
+                  class="font-monospace fw-normal text-uppercase d-md-block d-none mb-4"
+                >
+                  Company
+                </h2>
+                <div class="collapse d-md-block" id="footer-company">
+                  <div class="row gy-3 pb-3 pb-md-0">
+                    <div class="col-md-6">
+                      <ul
+                        class="footer-links list-unstyled small d-flex flex-column gap-3 pb-md-0 mb-0"
+                      >
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Materials</a></li>
+                        <li><a href="#">Materials &amp; Making</a></li>
+                        <li><a href="#">Shoe Care</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li>
+                          <a href="#"
+                            >Allbirds Responsible Disclosure Program</a
+                          >
+                        </li>
+                        <li><a href="#">California Transparency Act</a></li>
+                        <li><a href="#">Community Offers</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul
+                        class="footer-links list-unstyled small d-flex flex-column gap-3 pb-md-0 mb-0"
+                      >
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Patents</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <hr class="d-md-none my-0" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow -->
+          <div class="mt-4 mt-md-5 text-center text-md-start">
+            <p class="font-monospace text-uppercase mb-3">Follow the flock</p>
+            <div
+              class="d-flex justify-content-between justify-content-md-start gap-md-2 fs-6"
+            >
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-pinterest"></i
+              ></a>
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+              <a
+                href="#"
+                class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Countries dropdown -->
+          <div class="dropdown-margin">
+            <div class="dropup text-center text-md-start">
+              <button
+                class="btn text-white border-0 p-0 small"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                US <i class="bi bi-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu" data-bs-theme="dark">
+                <li><a class="dropdown-item" href="#">US</a></li>
+                <li><a class="dropdown-item" href="#">Canada</a></li>
+                <li><a class="dropdown-item" href="#">United Kingdom</a></li>
+              </ul>
+            </div>
+
+            <hr class="my-4" />
+
+            <div
+              class="footer-links row row-cols-2 row-cols-lg-auto justify-content-lg-between gy-3 small"
+            >
+              <div class="col">
+                &copy;2026 Allbirds Clone. All Rights Reserved
+              </div>
+              <div class="col"><a href="#">Refund policy</a></div>
+              <div class="col"><a href="#">Privacy policy</a></div>
+              <div class="col"><a href="#">Terms of service</a></div>
+              <div class="col"><a href="#">Shipping policy</a></div>
+              <div class="col">
+                <a href="#">Do Not Sell My Personal Information</a>
+              </div>
+              <div class="col"><a href="#">California Transparency Act</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
