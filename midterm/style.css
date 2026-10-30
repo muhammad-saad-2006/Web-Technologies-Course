@@ -341,3 +341,104 @@ body {
     padding: 0.75rem 0 0 0.5rem;
   }
 }
+
+
+/* Midterm personal values: N=76, BP=676px, H=172deg, K=4 */
+:root {
+  --midterm-accent: hsl(172, 70%, 45%);
+}
+
+/* Task 1: category radio filters. */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.category-filters input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.category-filters label {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #aaa69e;
+  border-radius: 50rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+.category-filters input:checked + label {
+  color: #fff;
+  border-color: var(--midterm-accent);
+  background: var(--midterm-accent);
+}
+.category-filters input:focus-visible + label {
+  outline: 2px solid var(--midterm-accent);
+  outline-offset: 3px;
+}
+
+/* CSS-only category filtering: :has() detects which radio is checked. */
+#best-sellers:has(#filter-women:checked) #product-row .product-card:not([data-category*="women"]),
+#best-sellers:has(#filter-men:checked) #product-row .product-card:not([data-category*="men"]),
+#best-sellers:has(#filter-slip-on:checked) #product-row .product-card:not([data-category*="slip-on"]),
+#best-sellers:has(#filter-cruiser:checked) #product-row .product-card:not([data-category*="cruiser"]) {
+  display: none;
+}
+
+/* Search can also hide cards; display:none removes empty spaces. */
+#product-row .product-card.is-search-hidden {
+  display: none;
+}
+.midterm-search-row #product-search {
+  flex: 1 1 220px;
+  max-width: 420px;
+}
+#sort-price {
+  white-space: nowrap;
+}
+.premium-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 50rem;
+  color: #fff;
+  background: var(--midterm-accent);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Task 2: grid areas stack on mobile and switch at the personal BP. */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  gap: 1.5rem;
+}
+.product-layout-image { grid-area: image; min-width: 0; }
+.product-layout-details { grid-area: details; min-width: 0; }
+.product-layout-description { grid-area: description; min-width: 0; }
+
+@media (min-width: 676px) {
+  .product-layout {
+    grid-template-columns: minmax(0, 7fr) minmax(300px, 5fr);
+    grid-template-areas:
+      "image details"
+      "description description";
+    align-items: start;
+    gap: 2rem;
+  }
+  .product-layout-details {
+    position: sticky;
+    top: 106px;
+    align-self: start;
+  }
+  .product-layout-description {
+    margin-top: 0.5rem;
+  }
+}
