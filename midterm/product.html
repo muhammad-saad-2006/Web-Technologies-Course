@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Product Details - Allbirds Clone</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,16 +25,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- Static announcement: this assignment focuses on HTML and CSS, not JavaScript -->
+    <!-- Announcement -->
     <div class="product-announcement text-white text-center py-2 px-3">
       Free ground shipping on orders over $100
     </div>
 
-    <!-- Responsive, static navigation shared visually with the homepage -->
+    <!-- Header -->
     <header class="product-site-header">
       <nav
         class="navbar product-navbar bg-white rounded-4 shadow-sm mx-3 mt-3 px-3 py-2"
@@ -61,9 +63,9 @@
               <a class="nav-link link-dark" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-dark" href="index.html#best-sellers"
-                >Best Sellers</a
-              >
+              <a class="nav-link link-dark" href="index.html#best-sellers">
+                Best Sellers
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link link-dark" href="index.html">Men</a>
@@ -81,6 +83,7 @@
             >
               <i class="bi bi-search"></i>
             </button>
+
             <button
               class="bg-transparent border-0 p-0 text-dark"
               type="button"
@@ -93,24 +96,28 @@
       </nav>
     </header>
 
+    <!-- Product Page -->
     <main class="product-detail-page py-4 py-lg-5">
       <div class="container">
+        <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="product-breadcrumb small mb-4">
-          <a href="index.html" class="text-dark text-decoration-none">Home</a>
+          <a href="index.html" class="text-dark text-decoration-none"> Home </a>
           <span class="mx-2">/</span>
           <a
             href="index.html#best-sellers"
             class="text-dark text-decoration-none"
-            >Best Sellers</a
           >
+            Best Sellers
+          </a>
           <span class="mx-2">/</span>
-          <span id="product-breadcrumb-name" aria-current="page"
-            >Women's Cruiser Slip On</span
-          >
+          <span id="product-breadcrumb-name" aria-current="page">
+            Women's Cruiser Slip On
+          </span>
         </nav>
 
+        <!-- TASK 2: CSS GRID LAYOUT -->
         <div class="product-layout">
-          <!-- Product image from the existing Best Sellers card in this project -->
+          <!-- AREA 1: PRODUCT IMAGE -->
           <div class="product-layout-image">
             <div class="product-image-panel">
               <span class="product-new-badge">New</span>
@@ -123,7 +130,7 @@
             </div>
           </div>
 
-          <!-- Product information based on the matching Allbirds product listing -->
+          <!-- AREA 2: PRODUCT DETAILS -->
           <div class="product-layout-details">
             <div class="product-information">
               <p
@@ -142,19 +149,23 @@
 
               <hr class="product-rule" />
 
+              <!-- Shoe Size -->
               <div class="mb-4">
                 <label
                   id="shoe-size-label"
                   for="shoe-size"
                   class="form-label fw-semibold"
-                  >Women's US size</label
                 >
+                  Women's US size
+                </label>
+
                 <select
                   id="shoe-size"
                   name="shoe-size"
                   class="form-select product-select"
                 >
                   <option value="" selected disabled>Select a size</option>
+
                   <option>5</option>
                   <option>5.5</option>
                   <option>6</option>
@@ -169,6 +180,7 @@
                   <option>10.5</option>
                   <option>11</option>
                 </select>
+
                 <p
                   id="product-size-note"
                   class="small text-secondary mt-2 mb-0"
@@ -177,10 +189,12 @@
                 </p>
               </div>
 
+              <!-- Quantity -->
               <div class="mb-4">
-                <label for="quantity" class="form-label fw-semibold"
-                  >Quantity</label
-                >
+                <label for="quantity" class="form-label fw-semibold">
+                  Quantity
+                </label>
+
                 <select
                   id="quantity"
                   name="quantity"
@@ -193,56 +207,29 @@
                 </select>
               </div>
 
+              <!-- Add to Cart -->
               <button
                 type="button"
                 class="btn btn-dark rounded-pill w-100 product-add-button"
               >
                 Add to Cart — <span id="product-button-price">$100</span>
               </button>
+
               <p class="small text-secondary mt-3 mb-0">
                 This is a static course project. The size selector and cart
                 button are for layout only.
               </p>
-
-              <hr class="product-rule my-4" />
-
-              <section class="product-details-copy">
-                <h2 class="h6 text-uppercase fw-semibold mb-3">
-                  Why you'll love it
-                </h2>
-                <ul id="product-feature-list" class="product-feature-list">
-                  <li>
-                    Breathable tree-knit upper made with a TENCEL™ Lyocell and
-                    recycled-polyester blend.
-                  </li>
-                  <li>Soft Merino-wool blend lining.</li>
-                  <li>Sugarcane-based SweetFoam® cushioning.</li>
-                  <li>Featherbed™ memory-foam insole for added comfort.</li>
-                </ul>
-                <p class="mt-3 mb-0 small">
-                  <a
-                    id="official-product-link"
-                    href="https://www.allbirds.com/products/womens-cruiser-slip-on-blizzard"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-dark"
-                    >View product on Allbirds ↗</a
-                  >
-                </p>
-              </section>
-
-              <a
-                href="index.html#best-sellers"
-                class="product-back-link d-inline-flex align-items-center gap-2 mt-3"
-              >
-                <i class="bi bi-arrow-left"></i>
-                Continue shopping
-              </a>
             </div>
           </div>
+
+          <!-- AREA 3: FULL WIDTH DESCRIPTION -->
           <div class="product-layout-description">
+            <!-- Product Description -->
             <section class="product-description-area">
-              <h2 class="h5 text-uppercase fw-semibold mb-3">Product description</h2>
+              <h2 class="h5 text-uppercase fw-semibold mb-3">
+                Product description
+              </h2>
+
               <p id="product-description" class="product-description mb-4">
                 Slip in and go. The Cruiser Slip On keeps the classic Cruiser
                 look without the laces. Its breathable tree-knit upper makes it
@@ -257,6 +244,49 @@
                 everyday option for a range of casual settings.
               </p>
             </section>
+
+            <hr class="product-rule my-4" />
+
+            <!-- Product Features -->
+            <section class="product-details-copy">
+              <h2 class="h6 text-uppercase fw-semibold mb-3">
+                Why you'll love it
+              </h2>
+
+              <ul id="product-feature-list" class="product-feature-list">
+                <li>
+                  Breathable tree-knit upper made with a TENCEL™ Lyocell and
+                  recycled-polyester blend.
+                </li>
+
+                <li>Soft Merino-wool blend lining.</li>
+
+                <li>Sugarcane-based SweetFoam® cushioning.</li>
+
+                <li>Featherbed™ memory-foam insole for added comfort.</li>
+              </ul>
+
+              <p class="mt-3 mb-0 small">
+                <a
+                  id="official-product-link"
+                  href="https://www.allbirds.com/products/womens-cruiser-slip-on-blizzard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark"
+                >
+                  View product on Allbirds ↗
+                </a>
+              </p>
+            </section>
+
+            <!-- Back to Products -->
+            <a
+              href="index.html#best-sellers"
+              class="product-back-link d-inline-flex align-items-center gap-2 mt-3"
+            >
+              <i class="bi bi-arrow-left"></i>
+              Continue shopping
+            </a>
           </div>
         </div>
       </div>
@@ -265,14 +295,13 @@
     <!-- Footer -->
     <footer class="site-footer text-white">
       <div class="px-4 px-md-5 pt-5 pb-5 pb-md-4">
-        <!-- Footer Content -->
-
         <div class="row gy-5 mt-md-4">
-          <!-- Subscription field -->
+          <!-- Subscription -->
           <div class="col-lg-6">
             <p class="font-monospace text-uppercase mb-3 mb-md-4">
               Subscribe to our emails
             </p>
+
             <div class="row">
               <div class="col-12 col-md-6 col-lg-8">
                 <form class="input-group bg-white rounded-pill overflow-hidden">
@@ -281,6 +310,7 @@
                     class="form-control border-0 shadow-none px-4"
                     placeholder="Email Address"
                   />
+
                   <button
                     class="btn border-0 fw-semibold text-uppercase small px-4"
                     type="submit"
@@ -292,36 +322,46 @@
             </div>
           </div>
 
-          <!-- Link Column -->
+          <!-- Footer Links -->
           <div class="col-lg-6">
             <div class="row">
               <!-- Help -->
               <div class="col-md-3">
                 <button
-                  class="footer-toggle collapsed d-flex d-md-none justify-content-between align-item-center bg-transparent w-100 text-white text-uppercase border-0 px-0 py-3 font-monospace"
+                  class="footer-toggle collapsed d-flex d-md-none justify-content-between align-items-center bg-transparent w-100 text-white text-uppercase border-0 px-0 py-3 font-monospace"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#footer-help"
                 >
-                  Help<i class="bi bi-plus-lg"></i>
+                  Help
+                  <i class="bi bi-plus-lg"></i>
                   <i class="bi bi-dash-lg"></i>
                 </button>
+
                 <h2
                   class="d-none d-md-block font-monospace text-uppercase fw-normal mb-4"
                 >
                   Help
                 </h2>
+
                 <div class="collapse d-md-block" id="footer-help">
                   <ul
                     class="footer-links list-unstyled d-flex flex-column gap-3 small pb-3 pb-md-0 mb-0"
                   >
                     <li>
-                      <a href="mailto:help@allbirds.com">help@allbirds.com</a>
+                      <a href="mailto:help@allbirds.com"> help@allbirds.com </a>
                     </li>
-                    <li><a href="#">FAQ/Contact Us</a></li>
-                    <li><a href="#">Returns/Exchanges</a></li>
+
+                    <li>
+                      <a href="#">FAQ/Contact Us</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Returns/Exchanges</a>
+                    </li>
                   </ul>
                 </div>
+
                 <hr class="d-md-none my-0" />
               </div>
 
@@ -333,14 +373,17 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#footer-shop"
                 >
-                  Shop <i class="bi bi-plus-lg"></i>
+                  Shop
+                  <i class="bi bi-plus-lg"></i>
                   <i class="bi bi-dash-lg"></i>
                 </button>
+
                 <h2
                   class="d-none d-md-block font-monospace text-uppercase fw-normal mb-4"
                 >
                   Shop
                 </h2>
+
                 <div class="d-md-block collapse" id="footer-shop">
                   <ul
                     class="footer-links list-unstyled d-flex flex-column small gap-3 pb-3 pb-md-0 mb-0"
@@ -351,8 +394,10 @@
                     <li><a href="womens.html">Women's Apparel</a></li>
                   </ul>
                 </div>
+
                 <hr class="d-md-none my-0" />
               </div>
+
               <!-- Company -->
               <div class="col-md-6">
                 <button
@@ -361,14 +406,17 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#footer-company"
                 >
-                  Company <i class="bi bi-plus-lg"></i>
+                  Company
+                  <i class="bi bi-plus-lg"></i>
                   <i class="bi bi-dash-lg"></i>
                 </button>
+
                 <h2
                   class="font-monospace fw-normal text-uppercase d-md-block d-none mb-4"
                 >
                   Company
                 </h2>
+
                 <div class="collapse d-md-block" id="footer-company">
                   <div class="row gy-3 pb-3 pb-md-0">
                     <div class="col-md-6">
@@ -381,14 +429,15 @@
                         <li><a href="#">Shoe Care</a></li>
                         <li><a href="#">Press</a></li>
                         <li>
-                          <a href="#"
-                            >Allbirds Responsible Disclosure Program</a
-                          >
+                          <a href="#">
+                            Allbirds Responsible Disclosure Program
+                          </a>
                         </li>
                         <li><a href="#">California Transparency Act</a></li>
                         <li><a href="#">Community Offers</a></li>
                       </ul>
                     </div>
+
                     <div class="col-md-6">
                       <ul
                         class="footer-links list-unstyled small d-flex flex-column gap-3 pb-md-0 mb-0"
@@ -399,51 +448,64 @@
                     </div>
                   </div>
                 </div>
+
                 <hr class="d-md-none my-0" />
               </div>
             </div>
           </div>
 
-          <!-- Follow -->
+          <!-- Social Media -->
           <div class="mt-4 mt-md-5 text-center text-md-start">
             <p class="font-monospace text-uppercase mb-3">Follow the flock</p>
+
             <div
               class="d-flex justify-content-between justify-content-md-start gap-md-2 fs-6"
             >
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-instagram"></i
-              ></a>
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-pinterest"></i
-              ></a>
+              >
+                <i class="bi bi-pinterest"></i>
+              </a>
+
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-facebook"></i
-              ></a>
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
+              >
+                <i class="bi bi-twitter-x"></i>
+              </a>
+
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-tiktok"></i
-              ></a>
+              >
+                <i class="bi bi-tiktok"></i>
+              </a>
+
               <a
                 href="#"
                 class="d-flex lh-1 p-2 rounded-circle border border-light text-white"
-                ><i class="bi bi-youtube"></i
-              ></a>
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
             </div>
           </div>
 
-          <!-- Countries dropdown -->
+          <!-- Country Dropdown -->
           <div class="dropdown-margin">
             <div class="dropup text-center text-md-start">
               <button
@@ -453,6 +515,7 @@
               >
                 US <i class="bi bi-chevron-down"></i>
               </button>
+
               <ul class="dropdown-menu" data-bs-theme="dark">
                 <li><a class="dropdown-item" href="#">US</a></li>
                 <li><a class="dropdown-item" href="#">Canada</a></li>
@@ -462,20 +525,26 @@
 
             <hr class="my-4" />
 
+            <!-- Copyright and Policies -->
             <div
               class="footer-links row row-cols-2 row-cols-lg-auto justify-content-lg-between gy-3 small"
             >
               <div class="col">
                 &copy;2026 Allbirds Clone. All Rights Reserved
               </div>
+
               <div class="col"><a href="#">Refund policy</a></div>
               <div class="col"><a href="#">Privacy policy</a></div>
               <div class="col"><a href="#">Terms of service</a></div>
               <div class="col"><a href="#">Shipping policy</a></div>
+
               <div class="col">
                 <a href="#">Do Not Sell My Personal Information</a>
               </div>
-              <div class="col"><a href="#">California Transparency Act</a></div>
+
+              <div class="col">
+                <a href="#">California Transparency Act</a>
+              </div>
             </div>
           </div>
         </div>
